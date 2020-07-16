@@ -8,9 +8,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "fetch-mock": "^6.3.0",
     "gh-pages": "^1.1.0",
-    "husky": "^4.2.5",
     "nock": "^9.2.5",
-    "pretty-quick": "^2.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
@@ -28,10 +26,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
